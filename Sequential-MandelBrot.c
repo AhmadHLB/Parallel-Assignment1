@@ -4,7 +4,7 @@
 
 #define WIDTH 1000
 #define HEIGHT 1000
-#define MAX_ITER 256
+#define MAX_ITER 1000
 #define scale 2
 #define xShift 200
 #define yShift 0
@@ -27,7 +27,7 @@ int main(){
             complex z0;
             z0.real = ((double)(j-xShift)-(0.5*WIDTH))/(0.5*WIDTH);
             z0.imag = ((double)(i-yShift)-(0.5*HEIGHT))/(0.5*HEIGHT);
-            grid[i][j] = 256-mandelbrot(z0);
+            grid[i][j] = mandelbrot(z0);
         }
     }
     t = clock()-t;
